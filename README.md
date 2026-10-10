@@ -5,4 +5,4 @@ Weather-Based Smart Crop Disease Prediction and Detection, aims to develop an in
 
 
 ## Demo
-![Demo GIF](images/demo.gif)
+![Demo GIF](DemoImageCropDiseasesIdentification.gif)
