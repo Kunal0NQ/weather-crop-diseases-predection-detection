@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plant Disease Image Detection</title>
+  <link rel="stylesheet" href="imagestyle.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.9.0"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo"><i class="fas fa-leaf"></i> Smart Crop Disease Detection</div>
+    <div class="nav-buttons">
+      <a href="index.html" class="nav-btn">Home</a>
+      <a href="image.html" class="nav-btn active">Image Detection</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <h1>Plant Disease Image Detection</h1>
+    <p>Upload a leaf image to detect the disease and see recommended solutions.</p>
+  </section>
+
+  <!-- Cards Section -->
+  <section class="cards-container">
+
+    <!-- Card 1: Upload & Preview -->
+    <div class="card upload-card">
+      <i class="fas fa-upload icon"></i>
+      <h2>Upload Leaf Image</h2>
+      <input type="file" id="imageUpload" accept="image/*">
+      <div class="preview">
+        <img id="previewImage" src="" alt="Preview">
+      </div>
+    </div>
+
+    <!-- Card 2: Predict & Result -->
+    <div class="card predict-card">
+      <i class="fas fa-microscope icon"></i>
+      <h2>Run Prediction</h2>
+      <button id="predictBtn" class="btn">Detect Disease</button>
+      <div id="spinner" class="spinner"></div>
+      <div id="predictionResult" class="prediction">Model loading...</div>
+    </div>
+
+    <!-- Card 3: Solutions -->
+    <div class="card solution-card">
+      <i class="fas fa-tools icon"></i>
+      <h2>Suggested Solutions</h2>
+      <div id="solutionsResult">
+        Upload and detect a disease to see solutions here.
+      </div>
+    </div>
+
+  </section>
+
+  <script src="imagejs.js"></script>
+</body>
+</html>
